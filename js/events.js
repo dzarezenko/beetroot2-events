@@ -8,6 +8,17 @@ function divClick(e) {
   e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 }
 
+function forceAlert() {
+  alert("!!!");
+}
+
 let square = document.getElementById('square');
 console.log(square);
-square.onclick = divClick;
+//square.onclick = divClick;
+
+square.addEventListener('mouseover', (e) => {
+  divClick(e);
+});
+square.addEventListener('click', (e) => {
+  forceAlert();
+});
