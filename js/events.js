@@ -7,3 +7,7 @@ function divClick(e) {
 
   e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 }
+
+let square = document.getElementById('square');
+console.log(square);
+square.onclick = divClick;
